@@ -20,3 +20,4 @@ npm run dev
 
 ## Live Demo
 ![demo](docs/demo.gif)
+[Live Demo](https://<username>.github.io/untitled-emotions-ar/)
