@@ -49,12 +49,26 @@
   </style>
 </head>
 <body>
-  <video id="video" autoplay playsinline muted></video>
+  <video id="cam" autoplay playsinline muted></video>
   <div id="overlay" style="display:none;">
     <div id="title">Untitled Emotions</div>
     <a id="legal" href="legal.html" target="_blank">Impressum &amp; Datenschutz</a>
   </div>
 
-  <script type="module" src="/dist/main.js"></script>
+  <script>
+    async function startCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const video = document.getElementById('cam');
+        video.srcObject = stream;
+        document.getElementById('overlay').style.display = 'flex';
+      } catch (err) {
+        alert('Zugriff auf Kamera nicht möglich.');
+        console.error(err);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', startCamera);
+  </script>
 </body>
 </html>
