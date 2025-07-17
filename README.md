@@ -18,6 +18,15 @@ npm install
 npm run dev
 ```
 
+For a quick presentation without any build step or third-party apps,
+simply open `public/index.html` on your phone. The page immediately
+requests camera access on a black background and then displays the
+"Untitled Emotions" title with a link to the legal notice.
+
+Opening `public/index.html` immediately asks for camera access on a black
+background. Once allowed, the phone camera appears together with the
+"Untitled Emotions" title and a link to the legal notice.
+
 ### Requirements
 Use Node.js version listed in `.nvmrc`.
 
@@ -28,7 +37,8 @@ npm test
 npm run build
 ```
 
-The build step outputs a single `dist/main.js` that `index.html` loads.
+The build step outputs a single `dist/main.js`, though the demo also works by
+simply opening `public/index.html` without building.
 
 The face landmark model is downloaded on `npm install`. Ensure `public/models/face_landmarker.task` exists.
 
