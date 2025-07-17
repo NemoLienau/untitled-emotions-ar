@@ -1,4 +1,7 @@
-export function rigFace(landmarks: unknown): Record<string, unknown> {
-  console.log('rigging face', landmarks);
-  return {};
+export interface LandmarkPoint { x: number; y: number; z: number }
+
+export function rigFace(landmarks: LandmarkPoint[]): { nose?: LandmarkPoint } {
+  if (!Array.isArray(landmarks) || landmarks.length === 0) return {}
+  const nose = landmarks[0]
+  return { nose }
 }

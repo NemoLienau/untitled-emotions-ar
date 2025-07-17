@@ -18,6 +18,23 @@ npm install
 npm run dev
 ```
 
+### Requirements
+Use Node.js version listed in `.nvmrc`.
+
+### Building and Testing
+```bash
+npm run lint
+npm test
+npm run build
+```
+
+The build step outputs a single `dist/main.js` that `index.html` loads.
+
+The face landmark model is downloaded on `npm install`. Ensure `public/models/face_landmarker.task` exists.
+
 ## Live Demo
 ![demo](docs/demo.gif)
 [Live Demo](https://<username>.github.io/untitled-emotions-ar/)
+
+## License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
