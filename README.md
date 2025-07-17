@@ -18,6 +18,10 @@ npm install
 npm run dev
 ```
 
+When opened in a browser, the page immediately requests camera access on a black
+background. Once permission is granted, the device camera starts and the text
+"Untitled Emotions" appears over the video feed.
+
 ### Requirements
 Use Node.js version listed in `.nvmrc`.
 
