@@ -18,6 +18,10 @@ npm install
 npm run dev
 ```
 
+When opened in a browser, the page immediately requests camera access on a black
+background. After permission is granted the camera starts and the overlay shows
+"Untitled Emotions" with a link to the legal notice.
+
 ### Requirements
 Use Node.js version listed in `.nvmrc`.
 

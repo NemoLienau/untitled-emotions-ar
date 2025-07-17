@@ -2,11 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Untitled Emotions AR</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+    }
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+      pointer-events: none;
+    }
+    #title {
+      margin-top: 40px;
+      font-size: 2rem;
+      color: white;
+      pointer-events: none;
+    }
+    #legal {
+      margin-bottom: 10px;
+      font-size: 0.7rem;
+      color: gray;
+      pointer-events: auto;
+    }
+  </style>
 </head>
 <body>
-  <video id="video" autoplay playsinline></video>
-  <canvas id="canvas"></canvas>
+  <video id="video" autoplay playsinline muted></video>
+  <div id="overlay" style="display:none;">
+    <div id="title">Untitled Emotions</div>
+    <a id="legal" href="legal.html" target="_blank">Impressum &amp; Datenschutz</a>
+  </div>
+
   <script type="module" src="/dist/main.js"></script>
 </body>
 </html>
