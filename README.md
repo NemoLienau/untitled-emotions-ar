@@ -18,6 +18,11 @@ npm install
 npm run dev
 ```
 
+For a quick presentation without any build step or third-party apps,
+simply open `public/index.html` on your phone. The page immediately
+requests camera access on a black background and then displays the
+"Untitled Emotions" title with a link to the legal notice.
+
 Opening `public/index.html` immediately asks for camera access on a black
 background. Once allowed, the phone camera appears together with the
 "Untitled Emotions" title and a link to the legal notice.
